@@ -1,5 +1,7 @@
 from tkinter import Tk, BOTH, Canvas
 
+from geometry import Line
+
 
 class Window:
     def __init__(self, width, height):
@@ -22,3 +24,10 @@ class Window:
 
     def close(self):
         self.__running = False
+
+    """ We need a draw_line method on our Window class. 
+        It should take an instance of a Line and a fill_color as inputs, 
+            then call the Line's draw() method.
+    """
+    def draw_line(self, line: Line, fill_colour:str):
+        line.draw(fill_colour, self.__canvas)
