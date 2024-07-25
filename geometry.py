@@ -35,6 +35,7 @@ class Cell:
         self._y2: int | None = None
         self._win = win
         self.exists: bool = True
+        self._visited = False
 
     def draw(self, x1, y1, x2, y2):
         self._x1 = x1
